@@ -1,0 +1,104 @@
+.recommand{
+    height: 424px;
+    background: #301E5F;
+    .slideWrap{
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .slide{
+        height: 96px;
+        .content{
+            min-width: 350px;
+            height: 100%;
+            .custom-img{
+                width: 40px;
+                height: 40px;
+            }
+            img{
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+            }
+        }
+    }
+}
+.stepWrap{
+    max-width: 700px;
+    margin: 0 auto;
+}
+.step{
+    width: 115px;
+    position: relative;
+    .send_logo{
+        width: 115px;
+        height: 115px;
+        border: 2px solid #000000;
+        border-radius: 50%;
+        position: relative;
+        margin-bottom: 8px;
+        i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+        }
+    }
+    &:nth-child(1)::after, &:nth-child(2)::after, &:nth-child(3)::after{
+        content: '';
+        position: absolute;
+        top: 30%;
+        right: -49%;
+        border: 10px solid #000000;
+        border-right: 10px solid transparent;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        @include pad() {
+            position: static;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            border: 10px solid #000000;
+            border-right: 10px solid transparent;
+            border-left: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+    }
+}
+.selectCategory{
+    width: 255px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.card{
+    width: 23%;
+    img{
+        height: 302px;
+    }
+    button{
+        height: 48px;
+    }
+    .tag{
+        top: 2%;
+        right: -2%;
+    }
+}
+.cartsIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    top: 70%;
+    right: 1%;
+    border-radius: 50%;
+}

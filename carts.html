@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/all.css">
+</head>
+<body>
+    <header class="mb-md-6 mb-5">
+        <div class="container d-flex align-items-center justify-content-around h-100 pt-md-8 pb-md-7 pt-6 pb-5">
+            <h1>
+                <a href="index.html" class="title text-lg-xxl text-dark">
+                    WOWOROOM
+                </a>
+            </h1>
+            <i class="fas fa-bars d-block d-lg-none text-xxxl"></i>
+            <ul class="category d-lg-flex d-none align-items-center list-unstyled mb-0">
+                <li><a href="javascript:;" class="mr-9 text-lg-lg text-dark bold">床墊優勢</a></li>
+                <li><a href="javascript:;" class="mr-9 text-lg-lg text-dark bold">好評推薦</a></li>
+                <li><a href="javascript:;" class="mr-9 text-lg-lg text-dark bold">運送方式</a></li>
+                <li><a href="javascript:;" class="text-lg-lg text-dark bold">立即預訂</a></li>
+            </ul>
+        </div>
+        <div class="bar bg-dark d-flex align-items-end w-100"></div>
+    </header>
+    <div class="container pt-10 pb-8">
+        <h1 class="text-center mb-6">購物車列表</h1>
+        <ul class="progressWrap list-unstyled d-flex justify-content-around">
+            <li class="progress_list">
+                <div class="progress_logo preogress_logo_first d-flex justify-content-center align-items-center text-lg" data-step="1">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div class="progress_bar">
+                        <div class="progress_bar_finish" id="progress_finish_sec"></div>
+                    </div>
+                </div>
+                <h4>
+                    <span class="d-block text-center">step1</span>
+                    <span class="d-block text-center">確認購物車商品</span>
+                </h4>
+            </li>
+            <li class="progress_list">
+                <div class="progress_logo d-flex justify-content-center align-items-center text-lg" data-step="2">
+                    <i class="fas fa-list-ul"></i>
+                    <div class="progress_bar">
+                        <div class="progress_bar_finish" id="progress_finish_thrid"></div>
+                    </div>
+                </div>
+                <h4>
+                    <span class="d-block text-center">step2</span>
+                    <span class="d-block text-center">填寫預定資料</span>
+                </h4>
+            </li>
+            <li class="progress_list">
+                <div class="progress_logo d-flex justify-content-center align-items-center text-lg" data-step="3">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h4>
+                    <span class="d-block text-center">step3</span>
+                    <span class="d-block text-center">預定成功</span>
+                </h4>
+            </li>
+        </ul>
+    </div>
+    <div class="cartsWrap">
+        <div class="cartsContainer container pt-10">
+            <h2 class="text-center pb-6">您的購物車</h2>
+            <div class="pb-6">
+                <table class="mb-6">
+                    <thead>
+                        <tr>
+                            <th class="p-4" width="40%">品項</th>
+                            <th class="p-4" width="15%">單價</th>
+                            <th class="p-4" width="15%">數量</th>
+                            <th class="p-4" width="15%">金額</th>
+                            <th class="p-4" width="15%"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="cartsList">
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="p-4 pt-5">
+                                <button class="js-deleteAll btn btn-outline-dark px-5 py-2">刪除所有品項</button>
+                            </td>
+                            <td class="p-4 pt-5"></td>
+                            <td class="p-4 pt-5"></td>
+                            <td class="p-4 pt-5">
+                                <p class="mb-0">總金額</p>
+                            </td>
+                            <td class="pr-4 pb-4 pt-5 pl-0">
+                                <h4 class="cartsTotal text-nowrap mb-0 text-center text-lg">計算中</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 pt-5"></td>
+                            <td class="p-4 pt-5"></td>
+                            <td class="p-4 pt-5"></td>
+                            <td class="p-4 pt-5"></td>
+                            <td class="p-4 pt-5">
+                                <div class="sendCarts">
+                                    <button class="btn btn-primary text-nowrap">填寫資料</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="validateWrap pt-10 d-none">
+        <div class="container">
+            <h2 class="text-center pb-6">填寫預定資料</h2>
+            <div class="h-100 w-100">
+                <form class="orderForm">
+                    <div class="form-row justify-content-center">
+                        <div class="col-4 mb-9">
+                            <div class="mb-5">
+                                <label for="orderName">姓名</label>
+                                <input type="text" class="form-control" id="orderName" name="姓名" placeholder="請輸入姓名">
+                                <p class="validate-message mb-0 mt-2 text-danger" data-message="姓名"></p>
+                            </div>
+                            <div class="mb-5">
+                                <label for="orderPhone">電話</label>
+                                <input type="text" class="form-control" id="orderPhone" name="電話" placeholder="請輸入電話">
+                                <p class="validate-message mb-0 mt-2 text-danger" data-message="電話"></p>
+                            </div>
+                            <div class="mb-5">
+                                <label for="orderEmail">Email</label>
+                                <input type="text" class="form-control" id="orderEmail" name="Email" placeholder="請輸入 Email">
+                                <p class="validate-message mb-0 mt-2 text-danger" data-message="Email"></p>
+                            </div>
+                            <div class="mb-5">
+                                <label for="orderAddress">寄送地址</label>
+                                <input type="text" class="form-control" id="orderAddress" name="寄送地址" placeholder="請輸入寄送地址">
+                                <p class="validate-message mb-0 mt-2 text-danger" data-message="寄送地址"></p>
+                            </div>
+                            <label for="orderTrade">交易方式</label>
+                            <select class="form-control" id="orderTrade" name="交易方式">
+                                <option value="ATM">ATM</option>
+                                <option value="信用卡">信用卡</option>
+                                <option value="超商付款">超商付款</option>
+                            </select>
+                            <p class="validate-message mb-0 mt-2 text-danger" data-message="交易方式"></p>
+                        </div>
+                    </div>
+                    <div class="sendOrder d-flex justify-content-center">
+                        <button type="submit" class="btn btn-dark">送出預訂資料</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="finishWrap d-none">
+        <div class="container d-flex flex-column align-items-center justify-content-center h-100">
+            <h2 class="mb-4">成功下單~</h2>
+            <div class="mb-5">
+                <i class="fas fa-check-circle text-xxxl"></i>
+            </div>
+            <a href="index.html" class="btn btn-primary">回首頁</a>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    <script type="module" src="./api/api.js"></script>
+    <script type="module" src="JS/carts.js"></script>
+</body>
+</html>

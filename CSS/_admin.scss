@@ -1,0 +1,17 @@
+.chart{
+    margin-bottom: 118px;
+}
+.orderList{
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    table, th, td{
+        padding: 10px;
+        border: 1px solid #000000;
+    }
+}
+.orderList::-webkit-scrollbar {
+    display: none;
+}

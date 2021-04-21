@@ -1,0 +1,15 @@
+*{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+a:hover{
+    text-decoration: none;
+}
+.link_primary{
+    &:hover{
+        color: $primary !important;
+        text-decoration: none;
+    }
+    &:focus{
+        color: $primary !important;
+    }
+}

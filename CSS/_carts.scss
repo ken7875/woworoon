@@ -1,0 +1,88 @@
+.progress_list{
+    width: 168px;
+    .progress_logo{
+        position: relative;
+        display: block;
+        content: '';
+        text-align: center;
+        margin: 0 auto 10px auto;
+        border-radius: 50%;
+        border: 2px solid #000000;
+        width: 60px;
+        height: 60px;
+        background: #FFFFFF;
+        .progress_bar{
+            position: relative;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+            width: 368px;
+            height: 5px;
+            background: #dee2e6;
+            display: block;
+            position: absolute;
+        }
+    }
+    .preogress_logo_first{
+        background: #49CC90;
+    }
+}
+.cartsWrap{
+    background: #F8F8F8;
+}
+table{
+    margin: 0 auto;
+}
+.cartsList{
+    img{
+        width: 80px;
+        height: 80px;
+    }
+    td{
+        border-bottom: 1px solid #dee2e6;
+    }
+    .CartsQty{
+        background: #FFFFFF;
+    }
+}
+.sendCarts{
+    margin-right: 11%;
+}
+.deleteSingleBtn{
+    background: transparent;
+}
+.quantity{
+    button{
+        background: transparent;
+        border: none;
+    }
+}
+.validateWrap{
+    background: #F8F8F8;
+    .sendOrder{
+        padding-bottom: 90px;
+        button{
+            padding: 10px 68px 10px 68px;
+        }
+    }
+}
+.finishWrap{
+    background: #F8F8F8;
+    height: calc(100vh - 327.6px);
+    i{
+        color: #49CC90;
+    }
+}
+@keyframes barSpeed {
+    0%{
+        width: 0%;
+        height: 5px;
+        background: #49CC90;
+    }
+    100%{
+        width: 100%;
+        height: 5px;
+        background: #49CC90;
+    }
+}
